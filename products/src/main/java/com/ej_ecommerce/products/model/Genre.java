@@ -1,0 +1,23 @@
+package com.ej_ecommerce.products.model;
+
+public enum Genre {
+    BIOGRAPHY,
+    CHILDREN,
+    FANTASY,
+    GRAPHIC_FICTION,
+    HISTORICAL_FICTION,
+    HISTORY,
+    HORROR,
+    HUMANITIES,
+    HUMOR,
+    LITERARY_FICTION,
+    MYSTERY,
+    RELIGION,
+    ROMANCE,
+    SCIENCE_FICTION,
+    SCIENCE_TECHNOLOGY,
+    SELF_HELP,
+    SHORT_STORY,
+    THRILLER,
+    YOUNG_ADULT
+}
