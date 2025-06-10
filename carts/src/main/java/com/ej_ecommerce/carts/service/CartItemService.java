@@ -7,10 +7,12 @@ import com.ej_ecommerce.carts.model.CartItem;
 import com.ej_ecommerce.carts.repository.CartItemRepository;
 import com.ej_ecommerce.carts.repository.CartRepository;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+@Service
 public class CartItemService implements iCartItemService {
     private final CartItemRepository cartItemRepository;
     private final CartRepository cartRepository;
