@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -24,7 +23,7 @@ public class ProductService implements iProductService {
     @Override
     public ProductResponseDTO getProduct(Long idProduct) {
         Product product = productRepository.findById(idProduct)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el producto con id " + idProduct));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el producto con ID " + idProduct));
         return productMapper.toDto(product);
 
     }
@@ -35,5 +34,14 @@ public class ProductService implements iProductService {
         return products.stream()
                 .map(productMapper::toDto)
                 .toList();
+    }
+
+    @Override
+    public ProductResponseDTO updateStock(Long idProduct, int newStock) {
+        Product product = productRepository.findById(idProduct)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró un producto con ID " + idProduct));
+        product.setStock(newStock);
+        Product updated = productRepository.save(product);
+        return productMapper.toDto(updated);
     }
 }

@@ -17,6 +17,7 @@ public class Order {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrder;
     private Long idUser;
+    private Long idCart;
     private Double totalPrice;
     private LocalDate orderDate;
     private boolean active;

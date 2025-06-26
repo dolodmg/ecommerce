@@ -5,7 +5,10 @@ import com.ej_ecommerce.payments.dto.response.PaymentResponseDTO;
 import com.ej_ecommerce.payments.mapper.PaymentMapper;
 import com.ej_ecommerce.payments.model.Payment;
 import com.ej_ecommerce.payments.model.Status;
+import com.ej_ecommerce.payments.client.feign.OrderAPIClient;
 import com.ej_ecommerce.payments.repository.PaymentRepository;
+import feign.FeignException;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -17,10 +20,12 @@ import java.util.List;
 public class PaymentService implements iPaymentService {
     private final PaymentRepository paymentRepository;
     private final PaymentMapper paymentMapper;
+    private final OrderAPIClient orderAPIClient;
 
-    public PaymentService(PaymentRepository paymentRepository, PaymentMapper paymentMapper) {
+    public PaymentService(PaymentRepository paymentRepository, PaymentMapper paymentMapper, @Qualifier("com.ej_ecommerce.payments.client.feign.OrderAPIClient") OrderAPIClient orderAPIClient) {
         this.paymentRepository = paymentRepository;
         this.paymentMapper = paymentMapper;
+        this.orderAPIClient = orderAPIClient;
     }
 
     @Override
@@ -83,6 +88,13 @@ public class PaymentService implements iPaymentService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró un pago con el ID " + idPayment));
         existing.setStatus(status);
         Payment payment = paymentRepository.save(existing);
+        if (status == Status.APPROVED) {
+            try {
+                orderAPIClient.changeStatus(existing.getIdOrder(), "PAID");
+            } catch (FeignException e) {
+                throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "No se pudo actualizar el estado de la orden");
+            }
+        }
         return paymentMapper.toDto(payment);
     }
 

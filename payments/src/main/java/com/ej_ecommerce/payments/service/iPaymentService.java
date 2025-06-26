@@ -8,13 +8,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface iPaymentService {
-    public PaymentResponseDTO getPayment(Long idPayment);
-    public List<PaymentResponseDTO> getAll();
-    public List<PaymentResponseDTO> getPaymentsByDateRange(LocalDateTime start, LocalDateTime end);
-    public List<PaymentResponseDTO> getPaymentsByUser(Long idUser);
-    public List<PaymentResponseDTO> getPaymentsByStatus(Status status);
-    public List<PaymentResponseDTO> getPaymentsByPriceRange(Double minPrice, Double maxPrice);
-    public PaymentResponseDTO createPayment(PaymentRequestDTO paymentDTO);
-    public PaymentResponseDTO changeStatus(Long idPayment, Status status);
-    public String deletePayment(Long idPayment);
+    PaymentResponseDTO getPayment(Long idPayment);
+    List<PaymentResponseDTO> getAll();
+    List<PaymentResponseDTO> getPaymentsByDateRange(LocalDateTime start, LocalDateTime end);
+    List<PaymentResponseDTO> getPaymentsByUser(Long idUser);
+    List<PaymentResponseDTO> getPaymentsByStatus(Status status);
+    List<PaymentResponseDTO> getPaymentsByPriceRange(Double minPrice, Double maxPrice);
+    PaymentResponseDTO createPayment(PaymentRequestDTO paymentDTO);
+    PaymentResponseDTO changeStatus(Long idPayment, Status status);
+    String deletePayment(Long idPayment);
 }

@@ -6,10 +6,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface iNotificationService {
-    public NotificationResponseDTO getNotification(Long idNotification);
-    public List<NotificationResponseDTO> getNotificationsByUser(Long idUser);
-    public List<NotificationResponseDTO> getNotificationsByDateRange(LocalDateTime startDate, LocalDateTime endDate);
-    public NotificationResponseDTO createNotification(NotificationRequestDTO notificationDTO);
-    public String markAsRead(Long idNotification);
-    public String deleteNotification(Long idNotification);
+    NotificationResponseDTO getNotification(Long idNotification);
+    List<NotificationResponseDTO> getNotificationsByUser(Long idUser);
+    List<NotificationResponseDTO> getNotificationsByDateRange(LocalDateTime startDate, LocalDateTime endDate);
+    NotificationResponseDTO createNotification(NotificationRequestDTO notificationDTO);
+    String markAsRead(Long idNotification);
+    String deleteNotification(Long idNotification);
 }

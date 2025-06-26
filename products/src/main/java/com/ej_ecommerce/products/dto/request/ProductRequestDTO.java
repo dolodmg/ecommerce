@@ -1,9 +1,6 @@
 package com.ej_ecommerce.products.dto.request;
 
 import com.ej_ecommerce.products.model.Category;
-import com.ej_ecommerce.products.model.PersonType;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

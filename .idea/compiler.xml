@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="eureka-sv" />
+      </profile>
+      <profile name="Annotation profile for notifications" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/unknown/mapstruct-processor-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/project-lombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="orders" />
+        <module name="carts" />
+        <module name="notifications" />
+        <module name="users" />
+        <module name="payments" />
+        <module name="products" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="carts" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-sv" options="-parameters" />
+      <module name="notifications" options="-parameters" />
+      <module name="orders" options="-parameters" />
+      <module name="payments" options="-parameters" />
+      <module name="products" options="-parameters" />
+      <module name="users" options="-parameters" />
+    </option>
+  </component>
+</project>

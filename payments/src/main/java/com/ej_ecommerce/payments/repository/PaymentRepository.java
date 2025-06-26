@@ -10,8 +10,8 @@ import java.util.List;
 
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment, Long> {
-    public List<Payment> findAllByDateTimeBetween(LocalDateTime start, LocalDateTime end);
-    public List<Payment> findAllByIdUser(Long idUser);
-    public List<Payment> findAllByStatus(Status status);
-    public List<Payment> findAllByTotalBetween(Double minPrice, Double maxPrice);
+    List<Payment> findAllByDateTimeBetween(LocalDateTime start, LocalDateTime end);
+    List<Payment> findAllByIdUser(Long idUser);
+    List<Payment> findAllByStatus(Status status);
+    List<Payment> findAllByTotalBetween(Double minPrice, Double maxPrice);
 }

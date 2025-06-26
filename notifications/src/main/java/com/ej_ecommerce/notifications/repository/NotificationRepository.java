@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface NotificationRepository extends JpaRepository<Notification, Long> {
-    public List<Notification> findNotificationsByDateTimeBetween(LocalDateTime startDate, LocalDateTime endDate);
+    List<Notification> findNotificationsByDateTimeBetween(LocalDateTime startDate, LocalDateTime endDate);
 }

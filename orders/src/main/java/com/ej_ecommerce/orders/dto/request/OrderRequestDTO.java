@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 public class OrderRequestDTO {
     private Long idUser;
+    private Long idCart;
     private LocalDate orderDate;
     private List<OrderItemRequestDTO> items;
 }

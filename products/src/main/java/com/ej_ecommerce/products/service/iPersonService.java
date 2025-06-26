@@ -6,9 +6,9 @@ import com.ej_ecommerce.products.dto.response.PersonResponseDTO;
 import java.util.List;
 
 public interface iPersonService {
-    public PersonResponseDTO getPerson(Long idPerson);
-    public List<PersonResponseDTO> getAll();
-    public PersonResponseDTO createPerson(PersonRequestDTO personDTO);
-    public String deletePerson(Long idPerson);
-    public PersonResponseDTO editPerson(Long idPerson, PersonRequestDTO personDTO);
+    PersonResponseDTO getPerson(Long idPerson);
+    List<PersonResponseDTO> getAll();
+    PersonResponseDTO createPerson(PersonRequestDTO personDTO);
+    String deletePerson(Long idPerson);
+    PersonResponseDTO editPerson(Long idPerson, PersonRequestDTO personDTO);
 }

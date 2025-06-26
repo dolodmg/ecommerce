@@ -1,6 +1,5 @@
 package com.ej_ecommerce.products.dto.response;
 
-import com.ej_ecommerce.products.model.PersonType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
