@@ -13,7 +13,7 @@ public interface iPaymentService {
     List<PaymentResponseDTO> getPaymentsByDateRange(LocalDateTime start, LocalDateTime end);
     List<PaymentResponseDTO> getPaymentsByUser(Long idUser);
     List<PaymentResponseDTO> getPaymentsByStatus(Status status);
-    List<PaymentResponseDTO> getPaymentsByPriceRange(Double minPrice, Double maxPrice);
+    List<PaymentResponseDTO> getPaymentsByPriceRange(double minPrice, double maxPrice);
     PaymentResponseDTO createPayment(PaymentRequestDTO paymentDTO);
     PaymentResponseDTO changeStatus(Long idPayment, Status status);
     String deletePayment(Long idPayment);

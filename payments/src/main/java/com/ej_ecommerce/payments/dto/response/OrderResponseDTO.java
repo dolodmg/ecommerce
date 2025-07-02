@@ -10,5 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OrderResponseDTO {
     private Long idOrder;
+    private Long idUser;
     private String status;
+    private double totalPrice;
 }

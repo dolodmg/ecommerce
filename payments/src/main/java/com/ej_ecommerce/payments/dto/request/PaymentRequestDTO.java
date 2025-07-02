@@ -12,9 +12,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PaymentRequestDTO {
-    private Status status;
     private Long idUser;
     private Long idOrder;
-    private LocalDateTime dateTime;
-    private Double total;
 }

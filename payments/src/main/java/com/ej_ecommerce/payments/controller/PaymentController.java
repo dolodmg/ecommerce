@@ -36,7 +36,7 @@ public class PaymentController {
         return ResponseEntity.ok(payments);
     }
 
-    @GetMapping
+    @GetMapping("/get/date")
     @Operation(summary = "Retrieve all the payments in a given date range")
     public ResponseEntity<List<PaymentResponseDTO>> getPaymentsByDateRange(
             @RequestParam LocalDateTime startDate,
@@ -46,7 +46,7 @@ public class PaymentController {
         return ResponseEntity.ok(payments);
     }
 
-    @GetMapping("/{idUser}")
+    @GetMapping("/user/{idUser}")
     @Operation(summary = "Retrieve all the payments of a user")
     public ResponseEntity<List<PaymentResponseDTO>> getPaymentsByUser(@PathVariable Long idUser) {
         List<PaymentResponseDTO> payments = paymentService.getPaymentsByUser(idUser);
@@ -60,11 +60,11 @@ public class PaymentController {
         return ResponseEntity.ok(payments);
     }
 
-    @GetMapping
+    @GetMapping("/get/price")
     @Operation(summary = "Retrieve all the payments in a given price range")
     public ResponseEntity<List<PaymentResponseDTO>> getPaymentsByPriceRange(
-            @RequestParam Double minPrice,
-            @RequestParam Double maxPrice
+            @RequestParam double minPrice,
+            @RequestParam double maxPrice
     ) {
         List<PaymentResponseDTO> payments = paymentService.getPaymentsByPriceRange(minPrice, maxPrice);
         return ResponseEntity.ok(payments);

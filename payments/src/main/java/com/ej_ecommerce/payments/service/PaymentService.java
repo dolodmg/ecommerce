@@ -1,6 +1,7 @@
 package com.ej_ecommerce.payments.service;
 
 import com.ej_ecommerce.payments.dto.request.PaymentRequestDTO;
+import com.ej_ecommerce.payments.dto.response.OrderResponseDTO;
 import com.ej_ecommerce.payments.dto.response.PaymentResponseDTO;
 import com.ej_ecommerce.payments.mapper.PaymentMapper;
 import com.ej_ecommerce.payments.model.Payment;
@@ -68,7 +69,7 @@ public class PaymentService implements iPaymentService {
     }
 
     @Override
-    public List<PaymentResponseDTO> getPaymentsByPriceRange(Double minPrice, Double maxPrice) {
+    public List<PaymentResponseDTO> getPaymentsByPriceRange(double minPrice, double maxPrice) {
         List<Payment> payments = paymentRepository.findAllByTotalBetween(minPrice, maxPrice);
         return payments.stream()
                 .map(paymentMapper::toDto)
@@ -77,7 +78,20 @@ public class PaymentService implements iPaymentService {
 
     @Override
     public PaymentResponseDTO createPayment(PaymentRequestDTO paymentDTO) {
-        Payment payment = paymentMapper.toEntity(paymentDTO);
+        OrderResponseDTO order = orderAPIClient.getOrder(paymentDTO.getIdOrder());
+        if (order == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró una orden con ID " + paymentDTO.getIdUser());
+        }
+        if (!order.getStatus().equals("PENDING")) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "La orden no se encuentra en estado PENDIENTE");
+        }
+        Payment payment = new Payment();
+        payment.setIdOrder(order.getIdOrder());
+        payment.setTotal(order.getTotalPrice());
+        payment.setDateTime(LocalDateTime.now());
+        payment.setStatus(Status.PENDING);
+        payment.setActive(true);
+        payment.setIdUser(order.getIdUser());
         payment = paymentRepository.save(payment);
         return paymentMapper.toDto(payment);
     }

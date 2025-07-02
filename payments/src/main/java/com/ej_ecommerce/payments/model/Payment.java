@@ -22,6 +22,6 @@ public class Payment {
     private Long idUser;
     private Long idOrder;
     private LocalDateTime dateTime;
-    private Double total;
+    private double total;
     private boolean active;
 }
