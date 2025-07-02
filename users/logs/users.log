@@ -1,0 +1,29 @@
+2025-07-01T16:13:57.994-03:00  WARN 18852 --- [users] [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=3d16h15m9s255ms510µs601ns).
+2025-07-01T16:15:04.159-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:20:04.177-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:25:04.185-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:30:04.207-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:35:04.280-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:40:04.298-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:45:04.350-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:45:22.248-03:00  INFO 18852 --- [users] [http-nio-8083-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1438 ms
+2025-07-01T16:50:04.398-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:55:04.423-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:00:04.474-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:05:04.490-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:10:04.500-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:15:04.515-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:20:04.520-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:25:04.522-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:30:04.527-03:00  INFO 18852 --- [users] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:34:18.842-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2025-07-01T17:34:18.846-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1751402058845, current=DOWN, previous=UP]
+2025-07-01T17:34:18.854-03:00  INFO 18852 --- [users] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/host.docker.internal:users:8083: registering service...
+2025-07-01T17:34:18.903-03:00  INFO 18852 --- [users] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/host.docker.internal:users:8083 - registration status: 204
+2025-07-01T17:34:19.166-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-01T17:34:19.226-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-07-01T17:34:19.302-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-07-01T17:34:19.308-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-01T17:34:22.322-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-07-01T17:34:22.335-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/host.docker.internal:users:8083 - deregister  status: 200
+2025-07-01T17:34:22.337-03:00  INFO 18852 --- [users] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
