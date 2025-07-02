@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/editorials")
+@RequestMapping("/editorials")
 @Tag(name = "Editorials", description = "Editorials Endpoints")
 public class EditorialController {
     private final EditorialService editorialService;

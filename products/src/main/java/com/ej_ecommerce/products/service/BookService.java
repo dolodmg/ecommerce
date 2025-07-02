@@ -30,8 +30,8 @@ public class BookService implements iBookService {
     }
 
     @Override
-    public BookResponseDTO getBook(Long idBook) {
-        Book book = bookRepository.findById(idBook).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el libro con id " + idBook));
+    public BookResponseDTO getBook(Long idProduct) {
+        Book book = bookRepository.findById(idProduct).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el libro con id " + idProduct));
         return bookMapper.toDto(book);
     }
 
@@ -51,9 +51,9 @@ public class BookService implements iBookService {
     }
 
     @Override
-    public String deleteBook(Long idBook) {
+    public String deleteBook(Long idProduct) {
         try {
-            bookRepository.deleteById(idBook);
+            bookRepository.deleteById(idProduct);
             return "El libro fue eliminado correctamente";
         } catch (Exception e) {
             return "No se pudo eliminar el libro" + e.getMessage();
@@ -61,9 +61,9 @@ public class BookService implements iBookService {
     }
 
     @Override
-    public BookResponseDTO editBook(Long idBook, BookRequestDTO bookDTO) {
-        Book existing = bookRepository.findById(idBook)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el libro con ID " + idBook));
+    public BookResponseDTO editBook(Long idProduct, BookRequestDTO bookDTO) {
+        Book existing = bookRepository.findById(idProduct)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el libro con ID " + idProduct));
 
         existing.setISBN(bookDTO.getISBN());
         existing.setTitle(bookDTO.getTitle());

@@ -6,9 +6,9 @@ import com.ej_ecommerce.products.dto.response.AlbumResponseDTO;
 import java.util.List;
 
 public interface iAlbumService {
-    AlbumResponseDTO getAlbum(Long idAlbum);
+    AlbumResponseDTO getAlbum(Long idProduct);
     List<AlbumResponseDTO> getAll();
     AlbumResponseDTO createAlbum(AlbumRequestDTO albumDTO);
-    String deleteAlbum(Long idAlbum);
-    AlbumResponseDTO editAlbum(Long idAlbum, AlbumRequestDTO albumDTO);
+    String deleteAlbum(Long idProduct);
+    AlbumResponseDTO editAlbum(Long idProduct, AlbumRequestDTO albumDTO);
 }

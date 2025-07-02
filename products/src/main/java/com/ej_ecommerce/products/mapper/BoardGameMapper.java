@@ -10,7 +10,7 @@ import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring")
 public interface BoardGameMapper {
     @Mappings({
-            @Mapping(target = "idBoardGame", ignore = true),
+            @Mapping(target = "idProduct", ignore = true),
             @Mapping(source = "idBrand", target = "brand.idBrand")
     })
     BoardGame toEntity(BoardGameRequestDTO dto);

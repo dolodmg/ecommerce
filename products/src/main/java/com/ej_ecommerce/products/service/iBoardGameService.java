@@ -6,9 +6,9 @@ import com.ej_ecommerce.products.dto.response.BoardGameResponseDTO;
 import java.util.List;
 
 public interface iBoardGameService {
-    BoardGameResponseDTO getBoardGame(Long idBoardGame);
+    BoardGameResponseDTO getBoardGame(Long idProduct);
     List<BoardGameResponseDTO> getAll();
     BoardGameResponseDTO createBoardGame(BoardGameRequestDTO boardGameDTO);
-    String deleteBoardGame(Long idBoardGame);
-    BoardGameResponseDTO editBoardGame(Long idBoardGame, BoardGameRequestDTO boardGameDTO);
+    String deleteBoardGame(Long idProduct);
+    BoardGameResponseDTO editBoardGame(Long idProduct, BoardGameRequestDTO boardGameDTO);
 }

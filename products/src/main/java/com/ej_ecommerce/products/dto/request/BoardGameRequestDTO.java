@@ -11,7 +11,7 @@ import lombok.Setter;
 public class BoardGameRequestDTO {
     private String name;
     private Long idBrand;
-    private Double price;
+    private double price;
     private int stock;
     private String imageUrl;
     private String description;

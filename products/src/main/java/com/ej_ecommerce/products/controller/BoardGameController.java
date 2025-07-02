@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/boardgames")
+@RequestMapping("/boardgames")
 @Tag(name = "Boardgames", description = "Boardgames Endpoints")
 public class BoardGameController {
     private final BoardGameService boardGameService;
@@ -20,10 +20,10 @@ public class BoardGameController {
         this.boardGameService = boardGameService;
     }
 
-    @GetMapping("/get/{idBoardGame}")
+    @GetMapping("/get/{idProduct}")
     @Operation(summary = "Retrieve a boardgame by its ID")
-    public ResponseEntity<BoardGameResponseDTO> getBoardGame(@PathVariable Long idBoardGame) {
-        BoardGameResponseDTO boardgame = boardGameService.getBoardGame(idBoardGame);
+    public ResponseEntity<BoardGameResponseDTO> getBoardGame(@PathVariable Long idProduct) {
+        BoardGameResponseDTO boardgame = boardGameService.getBoardGame(idProduct);
         return ResponseEntity.ok(boardgame);
     }
 
@@ -41,17 +41,17 @@ public class BoardGameController {
         return ResponseEntity.ok(boardgame);
     }
 
-    @DeleteMapping("/delete/{idBoardGame}")
+    @DeleteMapping("/delete/{idProduct}")
     @Operation(summary = "Delete a boardgame")
-    public ResponseEntity<String> deleteBoardGame(@PathVariable Long idBoardGame) {
-        String message = boardGameService.deleteBoardGame(idBoardGame);
+    public ResponseEntity<String> deleteBoardGame(@PathVariable Long idProduct) {
+        String message = boardGameService.deleteBoardGame(idProduct);
         return ResponseEntity.ok(message);
     }
 
-    @PutMapping("/edit/{idBoardGame}")
+    @PutMapping("/edit/{idProduct}")
     @Operation(summary = "Edit a boardgame")
-    public ResponseEntity<BoardGameResponseDTO> editBoardGame(@PathVariable Long idBoardGame, @RequestBody BoardGameRequestDTO boardgameDTO) {
-        BoardGameResponseDTO updated = boardGameService.editBoardGame(idBoardGame, boardgameDTO);
+    public ResponseEntity<BoardGameResponseDTO> editBoardGame(@PathVariable Long idProduct, @RequestBody BoardGameRequestDTO boardgameDTO) {
+        BoardGameResponseDTO updated = boardGameService.editBoardGame(idProduct, boardgameDTO);
         return ResponseEntity.ok(updated);
     }
 

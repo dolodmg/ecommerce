@@ -17,7 +17,7 @@ public class AlbumRequestDTO {
     private Date publicationDate;
     private AlbumFormat albumFormat;
     private Long idPerson;
-    private Double price;
+    private double price;
     private int stock;
     private String imageUrl;
     private String description;

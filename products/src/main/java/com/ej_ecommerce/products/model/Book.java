@@ -13,8 +13,6 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 public class Book extends Product {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idBook;
     private String title;
     private String ISBN;
     private Date publicationDate;

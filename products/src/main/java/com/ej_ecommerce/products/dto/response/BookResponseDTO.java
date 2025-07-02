@@ -12,14 +12,14 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookResponseDTO {
-    private Long idBook;
+    private Long idProduct;
     private String title;
     private String ISBN;
     private Date publicationDate;
     private Genre genre;
     private String editorialName;
     private PersonResponseDTO person;
-    private Double price;
+    private double price;
     private int stock;
     private String imageUrl;
     private String description;

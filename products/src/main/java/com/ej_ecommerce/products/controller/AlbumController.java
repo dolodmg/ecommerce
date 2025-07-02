@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/albums")
+@RequestMapping("/albums")
 @Tag(name = "Albums", description = "Albums Endpoints")
 public class AlbumController {
     private final AlbumService albumService;
@@ -20,10 +20,10 @@ public class AlbumController {
         this.albumService = albumService;
     }
 
-    @GetMapping("/{idAlbum}")
+    @GetMapping("/{idProduct}")
     @Operation(summary = "Retrieve an album by its ID")
-    public ResponseEntity<AlbumResponseDTO> getAlbum(@PathVariable Long idAlbum) {
-        AlbumResponseDTO album = albumService.getAlbum(idAlbum);
+    public ResponseEntity<AlbumResponseDTO> getAlbum(@PathVariable Long idProduct) {
+        AlbumResponseDTO album = albumService.getAlbum(idProduct);
         return ResponseEntity.ok(album);
     }
 
@@ -41,17 +41,17 @@ public class AlbumController {
         return ResponseEntity.ok(album);
     }
 
-    @PutMapping("/edit/{idAlbum}")
+    @PutMapping("/edit/{idProduct}")
     @Operation(summary = "Edit an album")
-    public ResponseEntity<AlbumResponseDTO> editAlbum(@PathVariable Long idAlbum, @RequestBody AlbumRequestDTO albumDTO) {
-        AlbumResponseDTO updated = albumService.editAlbum(idAlbum, albumDTO);
+    public ResponseEntity<AlbumResponseDTO> editAlbum(@PathVariable Long idProduct, @RequestBody AlbumRequestDTO albumDTO) {
+        AlbumResponseDTO updated = albumService.editAlbum(idProduct, albumDTO);
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/delete/{idAlbum}")
+    @DeleteMapping("/delete/{idProduct}")
     @Operation(summary = "Delete an album")
-    public ResponseEntity<String> deleteAlbum(@PathVariable Long idAlbum) {
-        String message = albumService.deleteAlbum(idAlbum);
+    public ResponseEntity<String> deleteAlbum(@PathVariable Long idProduct) {
+        String message = albumService.deleteAlbum(idProduct);
         return ResponseEntity.ok(message);
     }
 }

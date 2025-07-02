@@ -17,7 +17,7 @@ public class BookRequestDTO {
     private Genre genre;
     private Long idEditorial;
     private Long idPerson;
-    private Double price;
+    private double price;
     private int stock;
     private String imageUrl;
     private String description;

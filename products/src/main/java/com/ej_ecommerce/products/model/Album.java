@@ -13,8 +13,6 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 public class Album extends Product {
-    @Id @GeneratedValue (strategy = GenerationType.AUTO)
-    private Long idAlbum;
     private String title;
     private Long code;
     private Date publicationDate;

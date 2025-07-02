@@ -26,9 +26,9 @@ public class AlbumService implements iAlbumService {
     }
 
     @Override
-    public AlbumResponseDTO getAlbum(Long idAlbum) {
-        Album album = albumRepository.findById(idAlbum)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el álbum con id " + idAlbum));
+    public AlbumResponseDTO getAlbum(Long idProduct) {
+        Album album = albumRepository.findById(idProduct)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el álbum con id " + idProduct));
         return albumMapper.toDto(album);
     }
 
@@ -48,9 +48,9 @@ public class AlbumService implements iAlbumService {
     }
 
     @Override
-    public String deleteAlbum(Long idAlbum) {
+    public String deleteAlbum(Long idProduct) {
         try {
-            albumRepository.deleteById(idAlbum);
+            albumRepository.deleteById(idProduct);
             return "El álbum fue eliminado correctamente";
         } catch (Exception e) {
             return "No se pudo eliminar el álbum" + e.getMessage();
@@ -58,9 +58,9 @@ public class AlbumService implements iAlbumService {
     }
 
     @Override
-    public AlbumResponseDTO editAlbum(Long idAlbum, AlbumRequestDTO albumDTO) {
-        Album existing = albumRepository.findById(idAlbum)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el álbum con ID " + idAlbum));
+    public AlbumResponseDTO editAlbum(Long idProduct, AlbumRequestDTO albumDTO) {
+        Album existing = albumRepository.findById(idProduct)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el álbum con ID " + idProduct));
 
         existing.setTitle(albumDTO.getTitle());
         existing.setCode(albumDTO.getCode());

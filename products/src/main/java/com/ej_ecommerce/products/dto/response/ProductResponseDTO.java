@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ProductResponseDTO {
     private Long idProduct;
-    private Double price;
+    private double price;
     private Category category;
     private int stock;
     private String imageUrl;

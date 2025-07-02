@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Product {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idProduct;
-    private Double price;
+    private double price;
     @Enumerated(EnumType.STRING)
     private Category category;
     private int stock;

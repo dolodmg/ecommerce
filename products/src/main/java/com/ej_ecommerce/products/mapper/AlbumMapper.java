@@ -11,7 +11,7 @@ import org.mapstruct.Mappings;
 public interface AlbumMapper {
     @Mappings({
             @Mapping(source = "idPerson", target = "person.idPerson"),
-            @Mapping(target = "idAlbum", ignore = true)
+            @Mapping(target = "idProduct", ignore = true)
     })
 
     Album toEntity(AlbumRequestDTO dto);

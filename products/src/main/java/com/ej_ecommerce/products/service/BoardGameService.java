@@ -26,9 +26,9 @@ public class BoardGameService implements iBoardGameService {
     }
 
     @Override
-    public BoardGameResponseDTO getBoardGame(Long idBoardGame) {
-        BoardGame boardGame = boardGameRepository.findById(idBoardGame)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el juego de mesa con id " + idBoardGame));
+    public BoardGameResponseDTO getBoardGame(Long idProduct) {
+        BoardGame boardGame = boardGameRepository.findById(idProduct)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el juego de mesa con id " + idProduct));
         return boardGameMapper.toDto(boardGame);
     }
 
@@ -48,9 +48,9 @@ public class BoardGameService implements iBoardGameService {
     }
 
     @Override
-    public String deleteBoardGame(Long idBoardGame) {
+    public String deleteBoardGame(Long idProduct) {
         try {
-            boardGameRepository.deleteById(idBoardGame);
+            boardGameRepository.deleteById(idProduct);
             return "El juego de mesa fue eliminado correctamente";
         } catch (Exception e) {
             return "No se pudo eliminar el juego de mesa" + e.getMessage();
@@ -58,9 +58,9 @@ public class BoardGameService implements iBoardGameService {
     }
 
     @Override
-    public BoardGameResponseDTO editBoardGame(Long idBoardGame, BoardGameRequestDTO boardGameDTO) {
-        BoardGame existing = boardGameRepository.findById(idBoardGame)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el juego de mesa con ID " + idBoardGame));
+    public BoardGameResponseDTO editBoardGame(Long idProduct, BoardGameRequestDTO boardGameDTO) {
+        BoardGame existing = boardGameRepository.findById(idProduct)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No se encontró el juego de mesa con ID " + idProduct));
 
         existing.setName(boardGameDTO.getName());
         existing.setPrice(boardGameDTO.getPrice());

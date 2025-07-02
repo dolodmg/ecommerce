@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping("/books")
 @Tag(name = "Books", description = "Books Endpoints")
 public class BookController {
     private final BookService bookService;
@@ -28,10 +28,10 @@ public class BookController {
         return ResponseEntity.ok(books);
     }
 
-    @GetMapping("/get/{idBook}")
+    @GetMapping("/get/{idProduct}")
     @Operation(summary = "Retrieve a book by its ID")
-    public ResponseEntity<BookResponseDTO> getBook(@PathVariable Long idBook) {
-        BookResponseDTO book = bookService.getBook(idBook);
+    public ResponseEntity<BookResponseDTO> getBook(@PathVariable Long idProduct) {
+        BookResponseDTO book = bookService.getBook(idProduct);
         return ResponseEntity.ok(book);
     }
 
@@ -42,17 +42,17 @@ public class BookController {
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
-    @PutMapping("/edit/{idBook}")
+    @PutMapping("/edit/{idProduct}")
     @Operation(summary = "Edit a book")
-    public ResponseEntity<BookResponseDTO> updateBook(@PathVariable Long idBook, @RequestBody BookRequestDTO bookDTO) {
-        BookResponseDTO updated = bookService.editBook(idBook, bookDTO);
+    public ResponseEntity<BookResponseDTO> updateBook(@PathVariable Long idProduct, @RequestBody BookRequestDTO bookDTO) {
+        BookResponseDTO updated = bookService.editBook(idProduct, bookDTO);
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/delete/{idBook}")
+    @DeleteMapping("/delete/{idProduct}")
     @Operation(summary = "Delete a book")
-    public ResponseEntity<String> deleteBook(@PathVariable Long idBook) {
-        String message = bookService.deleteBook(idBook);
+    public ResponseEntity<String> deleteBook(@PathVariable Long idProduct) {
+        String message = bookService.deleteBook(idProduct);
         return ResponseEntity.ok(message);
     }
 }

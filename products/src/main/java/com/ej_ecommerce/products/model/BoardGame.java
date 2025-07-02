@@ -11,8 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 public class BoardGame extends Product {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idBoardGame;
     private String name;
     @ManyToOne
     private Brand brand;

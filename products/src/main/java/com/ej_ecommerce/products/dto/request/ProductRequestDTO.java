@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductRequestDTO {
-    private Double price;
+    private double price;
     private Category category;
     private int stock;
     private String imageUrl;

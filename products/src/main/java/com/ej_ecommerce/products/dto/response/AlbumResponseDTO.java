@@ -12,13 +12,13 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AlbumResponseDTO {
-    private Long idAlbum;
+    private Long idProduct;
     private String title;
     private Long code;
     private Date publicationDate;
     private AlbumFormat albumFormat;
     private PersonResponseDTO person;
-    private Double price;
+    private double price;
     private int stock;
     private String imageUrl;
     private String description;

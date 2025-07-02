@@ -9,9 +9,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BoardGameResponseDTO {
+    private Long idProduct;
     private String name;
     private BrandResponseDTO brand;
-    private Double price;
+    private double price;
     private int stock;
     private String imageUrl;
     private String description;

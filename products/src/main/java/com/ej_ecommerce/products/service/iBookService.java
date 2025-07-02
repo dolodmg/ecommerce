@@ -6,9 +6,9 @@ import com.ej_ecommerce.products.dto.response.BookResponseDTO;
 import java.util.List;
 
 public interface iBookService {
-    BookResponseDTO getBook(Long idBook);
+    BookResponseDTO getBook(Long idProduct);
     List<BookResponseDTO> getAll();
     BookResponseDTO createBook(BookRequestDTO bookDTO);
-    String deleteBook(Long idBook);
-    BookResponseDTO editBook(Long idBook, BookRequestDTO bookDTO);
+    String deleteBook(Long idProduct);
+    BookResponseDTO editBook(Long idProduct, BookRequestDTO bookDTO);
 }
