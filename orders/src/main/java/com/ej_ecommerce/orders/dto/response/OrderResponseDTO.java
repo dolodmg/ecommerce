@@ -15,7 +15,7 @@ import java.util.List;
 public class OrderResponseDTO {
     private Long idOrder;
     private Long idUser;
-    private Double totalPrice;
+    private double totalPrice;
     private LocalDate orderDate;
     private boolean active;
     private Status status;

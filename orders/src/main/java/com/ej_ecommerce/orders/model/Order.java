@@ -13,12 +13,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "orders")
 public class Order {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrder;
     private Long idUser;
     private Long idCart;
-    private Double totalPrice;
+    private double totalPrice;
     private LocalDate orderDate;
     private boolean active;
     @Enumerated(EnumType.STRING)

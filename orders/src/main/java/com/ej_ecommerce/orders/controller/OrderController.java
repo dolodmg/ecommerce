@@ -37,7 +37,7 @@ public class OrderController {
         return ResponseEntity.ok(orders);
     }
 
-    @GetMapping("/{idUser}")
+    @GetMapping("/user/{idUser}")
     @Operation(summary = "Retrieve all the orders of a user")
     public ResponseEntity<List<OrderResponseDTO>> getOrderByUserId(@PathVariable Long idUser) {
         List<OrderResponseDTO> orders = orderService.getOrderByUserId(idUser);

@@ -13,6 +13,4 @@ import java.util.List;
 public class OrderRequestDTO {
     private Long idUser;
     private Long idCart;
-    private LocalDate orderDate;
-    private List<OrderItemRequestDTO> items;
 }

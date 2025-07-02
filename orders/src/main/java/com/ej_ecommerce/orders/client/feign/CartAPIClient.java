@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "cartapi", url = "http://localhost:8081/carts", fallback = CartFallback.class)
 public interface CartAPIClient {
-    @GetMapping("/get/{idCart}")
+    @GetMapping("/{idCart}")
     CartResponseDTO getCart(@PathVariable("idCart") Long idClient);
 
 }
