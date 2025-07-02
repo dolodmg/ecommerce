@@ -10,7 +10,7 @@
         <module name="config-server" />
         <module name="eureka-sv" />
       </profile>
-      <profile name="Annotation profile for notifications" enabled="true">
+      <profile name="Annotation profile for users" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -20,10 +20,10 @@
         </processorPath>
         <module name="orders" />
         <module name="carts" />
-        <module name="notifications" />
         <module name="users" />
-        <module name="payments" />
+        <module name="notifications" />
         <module name="products" />
+        <module name="payments" />
       </profile>
     </annotationProcessing>
   </component>

@@ -11,5 +11,6 @@ spring:
         git:
           uri: https://github.com/dolodmg/ecommerce.git
           searchPaths: config-data
+          defaultLabel: dev
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}

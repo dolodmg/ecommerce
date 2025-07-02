@@ -1,0 +1,215 @@
+2025-07-01T16:13:56.309-03:00  WARN 13464 --- [products] [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=3d16h15m9s289ms459µs400ns).
+2025-07-01T16:16:24.877-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:21:24.894-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:26:24.911-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:31:24.932-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:35:02.659-03:00  INFO 13464 --- [products] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 9 class path changes (0 additions, 9 deletions, 0 modifications)
+2025-07-01T16:35:02.737-03:00  INFO 13464 --- [products] [Thread-26] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS with eureka with status DOWN
+2025-07-01T16:35:02.742-03:00  INFO 13464 --- [products] [Thread-26] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1751398502742, current=DOWN, previous=UP]
+2025-07-01T16:35:02.747-03:00  INFO 13464 --- [products] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082: registering service...
+2025-07-01T16:35:02.952-03:00  INFO 13464 --- [products] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082 - registration status: 204
+2025-07-01T16:35:03.146-03:00  INFO 13464 --- [products] [Thread-26] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-01T16:35:03.205-03:00  INFO 13464 --- [products] [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-07-01T16:35:03.279-03:00  INFO 13464 --- [products] [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-07-01T16:35:03.284-03:00  INFO 13464 --- [products] [Thread-26] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-01T16:35:06.291-03:00  INFO 13464 --- [products] [Thread-26] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-07-01T16:35:06.306-03:00  INFO 13464 --- [products] [Thread-26] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082 - deregister  status: 200
+2025-07-01T16:35:06.309-03:00  INFO 13464 --- [products] [Thread-26] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-01T16:35:10.770-03:00  INFO 13464 --- [products] [restartedMain] c.e.products.ProductsApplication         : Starting ProductsApplication using Java 19.0.2 with PID 13464 (C:\Users\dolod\Documents\ecommerce\products\target\classes started by dolod in C:\Users\dolod\Documents\ecommerce\products)
+2025-07-01T16:35:10.770-03:00  INFO 13464 --- [products] [restartedMain] c.e.products.ProductsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-01T16:35:10.776-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-07-01T16:35:10.776-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products, profiles=[default], label=null, version=70ff1c20df82935f3499d9f16ba4577ee320143d, state=null
+2025-07-01T16:35:14.344-03:00  INFO 13464 --- [products] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-01T16:35:14.392-03:00  WARN 13464 --- [products] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.NoClassDefFoundError: com/ej_ecommerce/products/model/Product
+2025-07-01T16:35:14.473-03:00  INFO 13464 --- [products] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-01T16:35:14.495-03:00 ERROR 13464 --- [products] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NoClassDefFoundError: com/ej_ecommerce/products/model/Product
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013) ~[na:na]
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:524) ~[na:na]
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:427) ~[na:na]
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:421) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:420) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:136) ~[spring-boot-devtools-3.3.11.jar:3.3.11]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:118) ~[spring-boot-devtools-3.3.11.jar:3.3.11]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1250) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:517) ~[spring-core-6.1.19.jar:6.1.19]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:465) ~[spring-core-6.1.19.jar:6.1.19]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:256) ~[spring-data-commons-3.3.11.jar:3.3.11]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.3.11.jar:3.3.11]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.3.11.jar:3.3.11]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.3.11.jar:3.3.11]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.3.11.jar:3.3.11]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:92) ~[spring-data-commons-3.3.11.jar:3.3.11]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:168) ~[spring-data-commons-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:375) ~[spring-context-6.1.19.jar:6.1.19]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:374) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:147) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:119) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1364) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-3.3.11.jar:3.3.11]
+	at com.ej_ecommerce.products.ProductsApplication.main(ProductsApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.11.jar:3.3.11]
+Caused by: java.lang.ClassNotFoundException: com.ej_ecommerce.products.model.Product
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.11.jar:3.3.11]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 54 common frames omitted
+
+2025-07-01T16:35:20.488-03:00  INFO 13464 --- [products] [restartedMain] c.e.products.ProductsApplication         : Starting ProductsApplication using Java 19.0.2 with PID 13464 (C:\Users\dolod\Documents\ecommerce\products\target\classes started by dolod in C:\Users\dolod\Documents\ecommerce\products)
+2025-07-01T16:35:20.489-03:00  INFO 13464 --- [products] [restartedMain] c.e.products.ProductsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-01T16:35:20.494-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-07-01T16:35:20.495-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products, profiles=[default], label=null, version=70ff1c20df82935f3499d9f16ba4577ee320143d, state=null
+2025-07-01T16:35:20.513-03:00  WARN 13464 --- [products] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.ej_ecommerce.products.mapper.AlbumMapperImpl]
+2025-07-01T16:35:20.534-03:00 ERROR 13464 --- [products] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.ej_ecommerce.products.mapper.AlbumMapperImpl]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:265) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:210) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:328) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:260) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1364) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-3.3.11.jar:3.3.11]
+	at com.ej_ecommerce.products.ProductsApplication.main(ProductsApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.11.jar:3.3.11]
+Caused by: java.io.FileNotFoundException: class path resource [com/ej_ecommerce/products/mapper/AlbumMapper.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215) ~[spring-core-6.1.19.jar:6.1.19]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54) ~[spring-core-6.1.19.jar:6.1.19]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.1.19.jar:6.1.19]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.1.19.jar:6.1.19]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:644) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:970) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:410) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:356) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:260) ~[spring-context-6.1.19.jar:6.1.19]
+	... 21 common frames omitted
+
+2025-07-01T16:35:34.263-03:00  INFO 13464 --- [products] [restartedMain] c.e.products.ProductsApplication         : Starting ProductsApplication using Java 19.0.2 with PID 13464 (C:\Users\dolod\Documents\ecommerce\products\target\classes started by dolod in C:\Users\dolod\Documents\ecommerce\products)
+2025-07-01T16:35:34.264-03:00  INFO 13464 --- [products] [restartedMain] c.e.products.ProductsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-01T16:35:34.274-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-07-01T16:35:34.274-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products, profiles=[default], label=null, version=70ff1c20df82935f3499d9f16ba4577ee320143d, state=null
+2025-07-01T16:35:37.381-03:00  INFO 13464 --- [products] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-01T16:35:37.476-03:00  INFO 13464 --- [products] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 7 JPA repository interfaces.
+2025-07-01T16:35:38.002-03:00  INFO 13464 --- [products] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=60d69060-9794-38ed-9f2c-ebeb3a66eac1
+2025-07-01T16:35:38.655-03:00  INFO 13464 --- [products] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-07-01T16:35:38.660-03:00  INFO 13464 --- [products] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-01T16:35:38.661-03:00  INFO 13464 --- [products] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-07-01T16:35:38.772-03:00  INFO 13464 --- [products] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-07-01T16:35:38.773-03:00  INFO 13464 --- [products] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4497 ms
+2025-07-01T16:35:39.392-03:00  INFO 13464 --- [products] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-01T16:35:39.405-03:00  INFO 13464 --- [products] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-01T16:35:39.448-03:00  INFO 13464 --- [products] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-01T16:35:39.451-03:00  INFO 13464 --- [products] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-07-01T16:35:39.511-03:00  INFO 13464 --- [products] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@137d0b1e
+2025-07-01T16:35:39.512-03:00  INFO 13464 --- [products] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-07-01T16:35:39.514-03:00  WARN 13464 --- [products] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-01T16:35:39.514-03:00  WARN 13464 --- [products] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-01T16:35:39.853-03:00  INFO 13464 --- [products] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-01T16:35:39.935-03:00  INFO 13464 --- [products] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-01T16:35:40.898-03:00  WARN 13464 --- [products] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-01T16:35:41.061-03:00  INFO 13464 --- [products] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-01T16:35:43.329-03:00  WARN 13464 --- [products] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-01T16:35:43.777-03:00  INFO 13464 --- [products] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-01T16:35:43.911-03:00  WARN 13464 --- [products] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-01T16:35:43.995-03:00  INFO 13464 --- [products] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-07-01T16:35:44.135-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-01T16:35:44.148-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-01T16:35:44.148-03:00  INFO 13464 --- [products] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:35:44.148-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-07-01T16:35:44.148-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-07-01T16:35:44.149-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-07-01T16:35:44.149-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-07-01T16:35:44.149-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-07-01T16:35:44.149-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-07-01T16:35:44.149-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-07-01T16:35:44.230-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-07-01T16:35:44.231-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-07-01T16:35:44.232-03:00  INFO 13464 --- [products] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-07-01T16:35:44.232-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751398544232 with initial instances count: 5
+2025-07-01T16:35:44.250-03:00  INFO 13464 --- [products] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS with eureka with status UP
+2025-07-01T16:35:44.250-03:00  INFO 13464 --- [products] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1751398544250, current=UP, previous=STARTING]
+2025-07-01T16:35:44.251-03:00  INFO 13464 --- [products] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082: registering service...
+2025-07-01T16:35:44.263-03:00  INFO 13464 --- [products] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-07-01T16:35:44.264-03:00  INFO 13464 --- [products] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2025-07-01T16:35:44.266-03:00  INFO 13464 --- [products] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-01T16:35:44.267-03:00  INFO 13464 --- [products] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-01T16:35:44.277-03:00  INFO 13464 --- [products] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-07-01T16:35:44.282-03:00  INFO 13464 --- [products] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082 - registration status: 204
+2025-07-01T16:35:44.746-03:00  INFO 13464 --- [products] [restartedMain] c.e.products.ProductsApplication         : Started ProductsApplication in 12.469 seconds (process running for 334982.831)
+2025-07-01T16:35:44.757-03:00  INFO 13464 --- [products] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-01T16:35:45.303-03:00  INFO 13464 --- [products] [http-nio-8082-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 393 ms
+2025-07-01T16:40:44.156-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:45:44.176-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:50:44.195-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T16:55:44.198-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:00:44.204-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:05:44.207-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:10:44.212-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:15:44.215-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:20:44.221-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:25:44.226-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:30:44.227-03:00  INFO 13464 --- [products] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-01T17:34:32.461-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS with eureka with status DOWN
+2025-07-01T17:34:32.463-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1751402072462, current=DOWN, previous=UP]
+2025-07-01T17:34:32.469-03:00  INFO 13464 --- [products] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082: registering service...
+2025-07-01T17:34:32.518-03:00  INFO 13464 --- [products] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082 - registration status: 204
+2025-07-01T17:34:32.740-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-01T17:34:32.809-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-07-01T17:34:32.864-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-07-01T17:34:32.868-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-01T17:34:35.885-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-07-01T17:34:35.894-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS/host.docker.internal:products:8082 - deregister  status: 200
+2025-07-01T17:34:35.895-03:00  INFO 13464 --- [products] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
