@@ -9,6 +9,8 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface CartMapper {
     @Mapping(target = "idCart", ignore = true)
+    @Mapping(target = "active", ignore = true)
+    @Mapping(target = "items", ignore = true)
     Cart toEntity(CartRequestDTO cartDTO);
 
     CartResponseDTO toDto(Cart cart);
